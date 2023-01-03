@@ -1,0 +1,29 @@
+{% extends 'stocks/base.html' %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block message %} 
+Welcome back Travis! (Hopefully you didn't lose money this time) 
+{% endblock %}
+
+{% block content %}
+<script>activateHeader("#login");</script>
+
+{% if user.is_authenticated%}
+  <h2>You're already logged in {{ user.username }}!</h2>
+  <div>
+  <a href="{% url 'logout' %}">logout</a>
+  </div>
+
+{% else %}
+  <h2>Log In</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Log In</button>
+  </form>
+{% endif %}
+
+{% endblock %}

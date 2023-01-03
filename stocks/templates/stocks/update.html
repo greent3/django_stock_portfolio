@@ -1,0 +1,20 @@
+{% extends 'stocks/base.html' %}
+
+{% block title%}
+Edit existing stock 
+{% endblock%}
+
+
+{% block content %}
+
+ <h1>Edit existing Stock</h1>
+
+<form action="" method="post" novalidate>
+  {% csrf_token %}
+  <table>
+    {{ form.as_table}}
+  </table>
+  <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

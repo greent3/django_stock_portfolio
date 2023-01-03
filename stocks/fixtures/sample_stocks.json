@@ -1,0 +1,89 @@
+[
+    {
+        "model": "stocks.stock",
+        "pk": 1,
+        "fields": {
+            "ticker": "EDIT",
+            "purchase_date": "2020-08-28",
+            "purchase_price": "34.4",
+            "current_price": "8.74",
+            "exchange": "NASDAQ",
+            "sell_date":"2021-02-21",
+            "sell_price": "67.3"
+        }
+    },
+    {
+        "model": "stocks.stock",
+        "pk": 2,
+        "fields": {
+            "ticker": "KAP",
+            "purchase_date": "2021-03-15",
+            "purchase_price": "23.6",
+            "current_price": "27.40",
+            "exchange": "LSE",
+            "sell_date":"2022-09-08",
+            "sell_price": "28.55"
+        }
+    },
+    {
+        "model": "stocks.stock",
+        "pk": 3,
+        "fields": {
+            "ticker": "ABML",
+            "purchase_date": "2020-09-11",
+            "purchase_price": "0.09",
+            "current_price": "0.41",
+            "exchange": "NASDAQ",
+            "sell_date": "2021-01-26",
+            "sell_price": "1.89"
+        }
+    },
+    {
+        "model": "stocks.stock",
+        "pk": 4,
+        "fields": {
+            "ticker": "HYSR",
+            "purchase_date": "2020-09-11",
+            "purchase_price": "0.02",
+            "current_price": "0.02",
+            "exchange": "NASDAQ",
+            "sell_date": "2021-01-13",
+            "sell_price": "0.18"
+        }
+    },
+    {
+        "model": "stocks.stock",
+        "pk": 5,
+        "fields": {
+            "ticker": "AQB",
+            "purchase_date": "2020-11-11",
+            "purchase_price": "3.99",
+            "current_price": "0.7",
+            "exchange": "NASDAQ"
+        }
+    },
+    {
+        "model": "stocks.stock",
+        "pk": 6,
+        "fields": {
+            "ticker": "MTA",
+            "purchase_date": "2021-11-19",
+            "purchase_price": "7.95",
+            "current_price": "5.81",
+            "exchange": "NYSE"
+        }
+    },
+    {
+        "model": "stocks.stock",
+        "pk": 7,
+        "fields": {
+            "ticker": "CLLS",
+            "purchase_date": "2021-05-03",
+            "purchase_price": "18.04",
+            "current_price": "2.10",
+            "exchange": "NASDAQ",
+            "sell_date": "2021-06-28",
+            "sell_price": "16.02"
+        }
+    }
+]

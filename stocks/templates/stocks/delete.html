@@ -1,0 +1,18 @@
+{% extends 'stocks/base.html' %}
+
+{% block title%}
+Delete stock 
+{% endblock%}
+
+
+{% block content %}
+
+ <h1>Delete Stock</h1>
+
+<form action="" method="post" novalidate>
+  {% csrf_token %}
+  <p>Are you sure you want to delete "{{ stock.ticker }}" purchased on {{ stock.purchase_date }}?</p>
+  <input type="submit" value="Confirm">
+</form>
+
+{% endblock %}

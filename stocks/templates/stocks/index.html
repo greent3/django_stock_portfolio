@@ -1,0 +1,64 @@
+{% extends 'stocks/base.html' %}
+{% load static %}
+
+{% block title %}
+Portfolio
+{% endblock %}
+
+{% block message %}
+Below are all of my stock trades since 2021!
+{% endblock %}
+
+{% block content %}
+<script>activateHeader("#portfolio");</script>
+<div id="index">
+
+
+<ul id='full-list' class='list'>
+  <div class="row">
+    <span class="column top">Ticker</span>
+    <span class="column top">Exchange</span>
+    <span class="column top">Purchase Date</span>
+    <span class="column top">Purchase Price</span>
+    <span class="column top">Current Price</span>
+    <span class="column top">Sell Date</span>
+    <span class="column top">Sell Price</span>
+    <span class="column top">Profit %</span>
+  </div>
+  {% for stock in stock_list %}
+    <div class="row">
+      <span class="column bottom">{{stock.ticker}}</span>
+      <span class="column bottom">{{stock.exchange}}</span>
+      <span class="column bottom">{{stock.purchase_date}}</span>
+      <span class="column bottom">{{stock.get_purchase_price}}</span>
+      <span class="column bottom">{{stock.get_current_price}}</span>
+      <span class="column bottom">{{stock.get_sell_date}}</span>
+      <span class="column bottom">{{stock.get_sell_price}}</span>
+      <span class="column bottom profit">{{stock.get_profit}}</span>
+      
+      
+
+
+      {% if user.is_authenticated %}
+      <span class="edit button">
+        <a href="{% url 'stock-update' stock.pk %}">Update</a>
+      </span>
+      <span class="delete button">
+        <a href="{% url 'stock-delete' stock.pk %}">Delete</a>
+      </span>
+      {% endif %}
+
+      </span>
+    </div>
+  {% endfor %}
+</ul>
+
+  {% if user.is_authenticated %}
+<div class="add button">
+  <a href="{% url 'stock-create' %}">Add Stock</a>
+</div>
+{% endif %}
+
+<script>changeProfitColor();</script>
+</div>
+{% endblock %}

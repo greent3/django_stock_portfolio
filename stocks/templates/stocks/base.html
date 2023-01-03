@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static "stocks/style.css" %}" rel="stylesheet"> 
+    <script type="text/javascript" src="{% static "stocks/script.js" %}"></script>
+  </head>
+  <body>
+    
+    <div class="header">
+        <span class="message">{% block message %}{% endblock %}</span>
+        <div class="header-right" >
+          <a id="portfolio" class="" href="{% url 'stock-list' %}" >Portfolio</a>
+          <a id="bio" class="" href="{% url 'bio-view' %}"  >Bio</a>
+          <a id="login" class="" href="{% url 'login' %}"  >Login</a> 
+        </div>
+      </div>
+
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+    
+  </body>
+</html>
