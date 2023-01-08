@@ -12,7 +12,6 @@ function changeProfitColor(){
         
         let newString = String(profit.innerHTML).substring(0, profit.innerHTML.length -3);
         let newnum = parseInt(newString)
-        console.log(newnum);
         if(newnum > 0){
             profit.classList.add("green")
         }
